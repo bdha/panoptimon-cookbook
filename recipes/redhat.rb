@@ -7,7 +7,9 @@
 #
 package 'java-1.7.0-openjdk'
 
-gem_package panoptimon
+gem_package "panoptimon" do
+  action :install
+end
 
 [ node['panoptimon']['install_dir'],
   node['panoptimon']['conf_dir'],
