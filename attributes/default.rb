@@ -1,6 +1,6 @@
 default['panoptimon']['user']          = 'root'
 default['panoptimon']['group']         = 'root'
-default['panoptimon']['conf_dir']      = '/opt/fire/etc/panoptimon'
+default['panoptimon']['conf_dir']      = '/etc/panoptimon'
 default['panoptimon']['install_dir']   = '/opt/panoptimon'
 default['panoptimon']['collectors']    = %w[cpu disk load memory iostat]
 default['panoptimon']['plugins']       = %w[status_http daemon_health log_to_file]
