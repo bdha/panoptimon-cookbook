@@ -1,0 +1,5 @@
+#!/bin/bash
+
+exec 2>&1
+
+exec setuidgid root bash -c 'exec /opt/panoptimon/bin/panoptimon -C /opt/fire/etc/panoptimon -D'

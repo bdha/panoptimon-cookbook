@@ -1,12 +1,5 @@
-# Cookbook Name:: panoptimon
-# Recipe:: default
-#
-# Copyright 2012, Sourcefire
-#
-# All rights reserved - Do Not Redistribute
-#
-
-case node['platform']
-when 'centos', 'redhat', 'fedora', 'scientific', 'amazon'
-  include_recipe 'panoptimon::redhat'
-end
+include_recipe "panoptimon::install"
+include_recipe "panoptimon::config"
+include_recipe "panoptimon::config_plugins"
+include_recipe "panoptimon::config_collectors"
+include_recipe "panoptimon::start"
