@@ -14,7 +14,7 @@ default['panoptimon']['config']['collector_interval']        = 60
 default['panoptimon']['config']['collector_timeout']         = 120
 
 ### Plugin configs.
-default['panoptimon']['plugin']['log_to_file']['file']       = "/tmp/metrics2.log"
+default['panoptimon']['plugin']['log_to_file']['file']       = "/tmp/metrics.log"
 
 default['panoptimon']['plugin']['graphite']['host']          = "graphite1-int.immunet.com"
 #default['panoptimon']['plugin']['graphite']['prefix']        = ""
