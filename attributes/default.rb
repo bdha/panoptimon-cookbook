@@ -3,7 +3,7 @@ default['panoptimon']['group']         = 'root'
 default['panoptimon']['conf_dir']      = '/etc/panoptimon'
 default['panoptimon']['install_dir']   = '/opt/panoptimon'
 default['panoptimon']['collectors']    = %w[cpu disk load memory iostat]
-default['panoptimon']['plugins']       = %w[status_http daemon_health log_to_file]
+default['panoptimon']['plugins']       = %w[status_http daemon_health log_to_file graphite]
 
 default['panoptimon']['disable_plugins']    = %w[]
 default['panoptimon']['disable_collectors'] = %w[]
@@ -15,6 +15,9 @@ default['panoptimon']['config']['collector_timeout']         = 120
 
 ### Plugin configs.
 default['panoptimon']['plugin']['log_to_file']['file']       = "/tmp/metrics2.log"
+
+default['panoptimon']['plugin']['graphite']['host']          = "graphite1-int.immunet.com"
+#default['panoptimon']['plugin']['graphite']['prefix']        = ""
 
 default['panoptimon']['plugin']['status_http']['enabled']    = "true"
 
