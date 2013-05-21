@@ -1,7 +1,8 @@
+default['panoptimon']['path']          = '/opt/fire/bin:/opt/fire/sbin:/opt/fire/embedded/bin:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin:/root/bin'
 default['panoptimon']['user']          = 'root'
 default['panoptimon']['group']         = 'root'
 default['panoptimon']['conf_dir']      = '/opt/fire/etc/panoptimon'
-default['panoptimon']['install_dir']   = '/opt/panoptimon'
+default['panoptimon']['install_dir']   = '/opt/fire/embedded/lib/ruby/gems/1.9.1/gems/panoptimon-0.3.0'
 default['panoptimon']['collectors']    = %w[cpu disk load memory iostat]
 default['panoptimon']['plugins']       = %w[status_http daemon_health log_to_file graphite]
 
