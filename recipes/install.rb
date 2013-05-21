@@ -1,4 +1,5 @@
-# XXX
+# XXX We should be using fireamp-panoptimon here, but it appears to be broken.
+#
 #gem_package "panoptimon" do
 #  action :install
 #end

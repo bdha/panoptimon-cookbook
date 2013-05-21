@@ -4,8 +4,11 @@ node['panoptimon']['collectors'].each do |collector|
     to "#{node['panoptimon']['install_dir']}/collectors/#{collector}"
   end
 
-  log "PANOPTIMON: Writing #{collector} config from node attributes."
-  File.open("#{node['panoptimon']['conf_dir']}/collectors/#{collector}.json","w") do |f|
-    f.write(JSON.pretty_generate(node['panoptimon']['collector'][collector]))
+  ruby_block "generate #{collector} config" do
+    block do
+      File.open("#{node['panoptimon']['conf_dir']}/collectors/#{collector}.json","w") do |f|
+        f.write(JSON.pretty_generate(node['panoptimon']['collector'][collector]))
+      end
+    end
   end
 end
