@@ -5,6 +5,7 @@
   panoptimon
 }.each do |gem|
   gem_package gem do
+    gem_binary("/opt/fire/embedded/bin/gem")
     action :install
   end
 end
