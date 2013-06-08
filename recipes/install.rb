@@ -1,8 +1,6 @@
-# XXX Testing new fireamp-pan package via base::install_fire 
-#  panoptimon
-
 %w{
   rusage
+  panoptimon
 }.each do |gem|
   gem_package gem do
     gem_binary("/opt/fire/embedded/bin/gem")
